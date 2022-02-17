@@ -1,0 +1,165 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f9d29d;
+  background-image: linear-gradient(315deg, #e2aa5c 0%, #ffd8cb 74%);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+}
+
+#root {
+  width: 370px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.todoApp {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  color: #1f2633;
+}
+.todoApp h1 {
+  padding: 1rem;
+  margin-top: 10px;
+}
+
+.heading {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  align-items: flex-start;
+}
+.heading .inputSection {
+  flex-basis: 60%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+  align-items: flex-start;
+  margin-right: 30px;
+}
+.heading .inputSection form {
+  position: relative;
+}
+.heading .inputSection form input {
+  width: 100%;
+  font-size: 20px;
+  padding: 0.3rem 1rem;
+  color: #1f2633;
+  border: none;
+  padding-right: 2.5rem;
+}
+.heading .inputSection form input:focus {
+  outline: none;
+}
+.heading .inputSection form button {
+  border: none;
+  background-color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 2px;
+  right: 0px;
+  cursor: pointer;
+  padding: 0.2rem 0.5rem;
+}
+.heading .selection {
+  flex-basis: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  align-items: flex-start;
+}
+.heading .selection .optionArea {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.heading .selection .optionArea h3, .heading .selection .optionArea .option h4 {
+  width: 120px;
+  text-align: left;
+  background-color: white;
+  font-size: 16px;
+  padding: 0.32rem 0.4rem;
+  margin: 0 auto;
+  cursor: pointer;
+  border: 2px solid #9e2d2d;
+}
+.heading .selection .optionArea button {
+  font-size: 20px;
+  position: absolute;
+  top: 0px;
+  right: -10px;
+  cursor: pointer;
+  background-color: #b63636;
+  padding: 0.32rem 0.5rem;
+  border: none;
+  overflow: hidden;
+}
+.heading .selection .optionArea .option {
+  border: none;
+  margin: 5px auto;
+}
+.heading .selection .optionArea .option h4 {
+  border: none;
+  border-radius: 0;
+}
+.heading .selection .optionArea .option h4:hover {
+  background-color: #e4e2e2;
+  transform: scale(1.2, 1.2);
+}
+
+.todoList {
+  padding: 1rem;
+  width: 100%;
+}
+.todoList .eachList {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: row;
+  background-color: white;
+  margin: 10px auto;
+  min-height: 40px;
+}
+.todoList .eachList p {
+  flex-basis: 80%;
+  font-weight: bold;
+  padding: 0 0.4rem;
+  font-size: 18px;
+}
+.todoList .eachList button {
+  height: 100%;
+  width: 50px;
+  font-size: 20px;
+  border: none;
+  margin-left: 7px;
+  background-color: white;
+  cursor: pointer;
+}
+.todoList .eachList .fa-circle-check {
+  color: green;
+}
+.todoList .eachList .fa-trash {
+  color: #d32626;
+}
+
+.active {
+  text-decoration: line-through;
+  color: grey;
+}/*# sourceMappingURL=style.css.map */

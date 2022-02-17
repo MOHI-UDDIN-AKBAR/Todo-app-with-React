@@ -1,0 +1,149 @@
+* {
+  box-sizing: border-box;
+}
+@mixin flexCenter($justify, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: center;
+  flex-direction: $direction;
+}
+body {
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #f9d29d;
+  background-image: linear-gradient(315deg, #e2aa5c 0%, #ffd8cb 74%);
+  @include flexCenter(flex-start, column);
+}
+#root {
+  width: 370px;
+  @include flexCenter(center, column);
+}
+.todoApp {
+  width: 100%;
+  @include flexCenter(flex-start, column);
+  color: #1f2633;
+  h1 {
+    padding: 1rem;
+    margin-top: 10px;
+  }
+}
+.heading {
+  width: 100%;
+  @include flexCenter(flex-start, row);
+  position: relative;
+  align-items: flex-start;
+  .inputSection {
+    flex-basis: 60%;
+    @include flexCenter(center, row);
+    align-items: flex-start;
+    margin-right: 30px;
+    form {
+      position: relative;
+      input {
+        width: 100%;
+        font-size: 20px;
+        padding: 0.3rem 1rem;
+        color: #1f2633;
+        border: none;
+        padding-right: 2.5rem;
+        &:focus {
+          outline: none;
+        }
+      }
+      button {
+        border: none;
+        background-color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 2px;
+        right: 0px;
+        cursor: pointer;
+        padding: 0.2rem 0.5rem;
+      }
+    }
+  }
+  .selection {
+    flex-basis: 40%;
+    @include flexCenter(center, column);
+    align-items: flex-start;
+    .optionArea {
+      @include flexCenter(center, column);
+      h3 {
+        width: 120px;
+        text-align: left;
+        background-color: white;
+        font-size: 16px;
+        padding: 0.32rem 0.4rem;
+        margin: 0 auto;
+        cursor: pointer;
+        border: 2px solid rgb(158, 45, 45);
+        // border-radius: 5px;
+        // padding-right: 5rem;
+      }
+      button {
+        font-size: 20px;
+        position: absolute;
+        top: 0px;
+        right: -10px;
+        cursor: pointer;
+        background-color: rgb(182, 54, 54);
+        padding: 0.32rem 0.5rem;
+        border: none;
+        overflow: hidden;
+      }
+      .option {
+        // visibility: hidden;
+        border: none;
+        margin: 5px auto;
+        // display: none;
+        h4 {
+          @extend h3;
+          border: none;
+          border-radius: 0;
+          //   text-align: center;
+          &:hover {
+            background-color: rgb(228, 226, 226);
+            transform: scale(1.2, 1.2);
+          }
+        }
+      }
+    }
+  }
+}
+
+.todoList {
+  padding: 1rem;
+  width: 100%;
+  .eachList {
+    @include flexCenter(space-around, row);
+    background-color: white;
+    margin: 10px auto;
+    min-height: 40px;
+    p {
+      flex-basis: 80%;
+      font-weight: bold;
+      padding: 0 0.4rem;
+      font-size: 18px;
+    }
+    button {
+      height: 100%;
+      width: 50px;
+      font-size: 20px;
+      border: none;
+      margin-left: 7px;
+      background-color: white;
+      cursor: pointer;
+    }
+    .fa-circle-check {
+      color: green;
+    }
+    .fa-trash {
+      color: rgb(211, 38, 38);
+    }
+  }
+}
+.active {
+  text-decoration: line-through;
+  color: grey;
+  // color: red;
+}
